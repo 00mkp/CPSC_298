@@ -16,12 +16,13 @@ fi
 
 PROMPT_CONTENT=$(xmllint --xpath 'string(//system)' "$PROMPT_FILE")
 
+# see what prompt we are giving to llm
 echo "Prompt Content: $PROMPT_CONTENT"
 
-
 # Run llm command
-COMMIT_MESSAGE=$(llm --system "$PROMPT_CONTENT" --model davinci-002 --save summarize 2>&1)
+COMMIT_MESSAGE=$(llm --system "$PROMPT_CONTENT" --model gpt-3.5-turbo --save summarize 2>&1)
 
+# show commit message to user 
 echo "LLM Output: $COMMIT_MESSAGE"
 
 # Making sure commit properly generated 
