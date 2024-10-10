@@ -20,7 +20,7 @@ PROMPT_CONTENT=$(xmllint --xpath 'string(//system)' "$PROMPT_FILE")
 echo "Prompt Content: $PROMPT_CONTENT"
 
 # Run llm command
-COMMIT_MESSAGE=$(llm --system "$PROMPT_CONTENT" --model gpt-4 --save summarize 2>&1)
+COMMIT_MESSAGE=$(llm --system "$PROMPT_CONTENT" --model gpt-4 --save summarize 2>&1) # sends error to stderr for debugging purposes, allows user to see any errors
 
 # show commit message to user 
 echo "LLM Output: $COMMIT_MESSAGE"
