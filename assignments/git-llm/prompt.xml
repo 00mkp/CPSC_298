@@ -1,0 +1,5 @@
+<prompt>
+    <system>Create an automated git commit command</system>
+    <model>gpt-4</model>
+    <task>summarize</task>
+</prompt>
