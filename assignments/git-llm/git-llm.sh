@@ -20,7 +20,7 @@ echo "Prompt Content: $PROMPT_CONTENT"
 
 
 # Run llm command
-COMMIT_MESSAGE=$(llm --system "$PROMPT_CONTENT" --model text-davinci-003 --save summarize 2>&1)
+COMMIT_MESSAGE=$(llm --system "$PROMPT_CONTENT" --model davinci-002 --save summarize 2>&1)
 
 echo "LLM Output: $COMMIT_MESSAGE"
 
