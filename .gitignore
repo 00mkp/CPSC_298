@@ -1,3 +1,5 @@
 .DS_Store
 .aider*
 student_roster.csv
+sample.aider.conf.yml
+.aider.conf.yml
